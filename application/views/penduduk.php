@@ -210,7 +210,6 @@
 </div>
 
 <script>
-
 	function getData(link, desa="", rw="", rt="") {
 		let linkAPI = `${link}kependudukan/?desa_id=${desa}&rw=${rw}&rt=${rt}`
 		$.ajax({
