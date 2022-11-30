@@ -26,7 +26,6 @@
 <script src="<?= base_url() ?>assets/modules/jquery-ui/jquery-ui.min.js"></script>
 
 <!-- Page Specific JS File -->
-<script src="<?= base_url() ?>assets/js/page/modules-chartjs.js"></script>
 <script src="<?= base_url() ?>assets/js/page/modules-datatables.js"></script>
 
 <!-- Template JS File -->

@@ -101,7 +101,7 @@
 
 <script>
 	function getData(link, desa="", rw="", rt="") {
-		let linkAPI = `${link}keluarga/?desa_id=${desa}&rw=${rw}&rt=${rt}`
+		let linkAPI = `${link}keluarga?desa_id=${desa}&rw=${rw}&rt=${rt}`
 		$.ajax({
 			url: `${linkAPI}`,
 			dataType:"json",
@@ -127,7 +127,9 @@
 		let kecamatan = $('#kecamatan').val();
 
 		if(kecamatan=='banjarmangu'){
-			return 'http://localhost:8080/';
+			return 'https://api.matajateng.com/';
+		}else{
+			return '';
 		}
 	}
 
@@ -201,8 +203,12 @@
 		$('#kecamatan').change(function(){
 			var link = changeKecamatan();
 
-			getDesa(link);
-			getData(link);
+			if(link!=""){
+				getDesa(link);
+				getData(link);
+			}else{
+				$('#info').css('display','none');
+			}
 
 		});
 		// END OnChange Kecamatan
