@@ -188,7 +188,7 @@
 	}
 
 	function getTahun(link) {
-		let linkAPI = `${link}keuangan/tahun/`;
+		let linkAPI = `${link}keuangan/tahun`;
 		$.ajax({
 			url: `${linkAPI}`,
 			dataType:"json",
@@ -204,9 +204,16 @@
 			}
 		});
 	}
-
 	function changeTahun() {
 		return $('#tahun').val();
+	}
+	function kondisiTahun(){
+		let kecamatan = changeKecamatan();
+		if(kecamatan!=""){
+			$('#tahun').attr('disabled', false);
+		}else{
+			$('#tahun').attr('disabled', true);
+		}
 	}
 
 	$(document).ready(function() {
@@ -222,6 +229,7 @@
 				$('#info').css('display','none');
 			}
 
+			kondisiTahun();
 		});
 		// END OnChange Kecamatan
 
