@@ -25,7 +25,7 @@
 						<div class="form-group">
 							<label>Tahun</label>
 							<select class="form-control" name="tahun" id="tahun">
-								<option value="">--- Semua Tahun---</option>
+								<option value="">--- Semua Tahun ---</option>
 							</select>
 						</div>
 					</div>
@@ -33,7 +33,7 @@
 						<div class="form-group">
 							<label>Bulan</label>
 							<select class="form-control" name="bulan" id="bulan" disabled>
-								<option>---Semua Bulan---</option>
+								<option>--- Semua Bulan ---</option>
 								<option value="1">Januari</option>
 								<option value="2">Februari</option>
 								<option value="3">Maret</option>
